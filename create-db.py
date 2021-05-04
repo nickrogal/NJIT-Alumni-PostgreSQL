@@ -1,1 +1,1 @@
-#this script creates the PostgreSQL database and tables
+#this script creates the PostgreSQL database and tablessss
