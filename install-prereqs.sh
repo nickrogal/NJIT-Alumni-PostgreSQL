@@ -6,5 +6,5 @@ sudo apt-get install postgresql postgresql-contrib -y
 #sudo apt install mysql-server -y
 #sudo apt install phpmyadmin php-mbstring php-zip php-gd php-json php-curl -y
 sudo apt-get install python3-pip -y
-pip3 install psycopg2
+pip3 install psycopg2-binary
 echo "Prerequsites installed, my guy!"
