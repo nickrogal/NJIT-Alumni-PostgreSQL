@@ -21,6 +21,7 @@ cur.execute('''CREATE TABLE ALUMNI
             Major TEXT NOT NULL,
             COLLEGE TEXT NOT NULL);''')
 print("Alumni table created...")
+print("......")
 
 # Create donation table
 cur.execute('''CREATE TABLE DONATIONS
@@ -29,6 +30,7 @@ cur.execute('''CREATE TABLE DONATIONS
             Donation MONEY NOT NULL,
             FOREIGN KEY (ALUMNIID) REFERENCES ALUMNI(ID));''')
 print("Donations table created...")
+print("......")
 # Create alerts table
 
 cur.execute('''CREATE TABLE ALERTS
@@ -37,7 +39,8 @@ cur.execute('''CREATE TABLE ALERTS
             LastAlert TIMESTAMP NOT NULL,
             FOREIGN KEY (ALUMNIID) REFERENCES ALUMNI(ID));''')
 print("Alerts table created...")
-prit("All tables created. Party on, Wayne!")
+print("......")
+print("All tables created. Party on, Wayne!")
 
 con.commit()
 con.close()
