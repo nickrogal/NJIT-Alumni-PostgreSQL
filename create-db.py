@@ -1,31 +1,40 @@
-#this script creates the PostgreSQL database and tables
-
-
 import psycopg2
 
-
- 
-
 # Connect to PostgreSQL DBMS
+#con = psycopg2.connect(database="postgres", user='postgres', password='password', host='localhost', port= 5432)
+con = psycopg2.connect(database="ubuntu_server", user='testuser', password='test', host='localhost', port= 5432)
+print("Database opened")
 
-con = psycopg2.connect("user=test password='test'");
-
-
- 
+con.autocommit = True
 
 # Obtain a DB Cursor
-cursor = con.cursor();
+cur = con.cursor()
 
-name_Database = "SocialMedia";
+# Creates database
+#cur.execute("CREATE database ubuntu-server")
 
- 
+# Create alumni table
+cur.execute('''CREATE TABLE ALUMNI
+            (ID INT PRIMARY KEY NOT NULL,
+            Name TEXT NOT NULL,
+            Email TEXT NOT NULL,
+            Major TEXT NOT NULL,
+            COLLEGE TEXT NOT NULL);''')
 
-# Create table statement
+# Create donation table
+cur.execute('''CREATE TABLE DONATIONS
+            (DonationID INT PRIMARY KEY NOT NULL,
+            AlumniID INT NOT NULL,
+            Donation REAL NOT NULL,
+            FOREIGN KEY (ALUMNIID) REFERENCES ALUMNI(ID));''')
 
-sqlCreateDatabase = "create database "+name_Database+";"
+# Create alerts table
+cur.execute('''CREATE TABLE ALERTS
+            (AlertID INT PRIMARY KEY NOT NULL,
+            AlumniID INT NOT NULL,
+            LastAlert TIMESTAMP NOT NULL,
+            FOREIGN KEY (ALUMNIID) REFERENCES ALUMNI(ID));''')
 
- 
 
-# Create a table in PostgreSQL database
-
-cursor.execute(sqlCreateDatabase);
+con.commit()
+con.close()
