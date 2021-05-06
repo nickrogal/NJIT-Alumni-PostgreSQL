@@ -31,7 +31,7 @@ cur.execute('''INSERT INTO ALERTS (AlertID, AlumniID, LastAlert)
       VALUES (1, 1, '2021-5-4 12:30:50');''')
 
 cur.execute('''INSERT INTO ALERTS (AlertID, AlumniID, LastAlert)
-      VALUES (1, 2, '2021-4-47 8:15:00');''')
+      VALUES (1, 2, '2021-7-4 8:15:00');''')
 
 cur.execute('''INSERT INTO ALERTS (AlertID, AlumniID, LastAlert)
       VALUES (1, 3, '2021-5-4 1:45:00');''')
