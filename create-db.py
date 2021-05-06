@@ -3,7 +3,7 @@ import psycopg2
 # Connect to PostgreSQL DBMS
 #con = psycopg2.connect(database="postgres", user='postgres', password='password', host='localhost', port= 5432)
 con = psycopg2.connect(database="ubuntu_server", user='testuser', password='test', host='localhost', port= 5432)
-print("Database opened")
+print("Connected to database successfully!")
 
 con.autocommit = True
 
@@ -20,6 +20,7 @@ cur.execute('''CREATE TABLE ALUMNI
             Email TEXT NOT NULL,
             Major TEXT NOT NULL,
             COLLEGE TEXT NOT NULL);''')
+print("Alumni table created...")
 
 # Create donation table
 cur.execute('''CREATE TABLE DONATIONS
@@ -27,14 +28,16 @@ cur.execute('''CREATE TABLE DONATIONS
             AlumniID INT NOT NULL,
             Donation MONEY NOT NULL,
             FOREIGN KEY (ALUMNIID) REFERENCES ALUMNI(ID));''')
-
+print("Donations table created...")
 # Create alerts table
+
 cur.execute('''CREATE TABLE ALERTS
             (AlertID INT PRIMARY KEY NOT NULL,
             AlumniID INT NOT NULL,
             LastAlert TIMESTAMP NOT NULL,
             FOREIGN KEY (ALUMNIID) REFERENCES ALUMNI(ID));''')
-
+print("Alerts table created...")
+prit("All tables created. Party on, Wayne!")
 
 con.commit()
 con.close()
