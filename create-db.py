@@ -16,7 +16,8 @@ cur = con.cursor()
 # Create alumni table
 cur.execute('''CREATE TABLE ALUMNI
             (ID INT PRIMARY KEY NOT NULL,
-            Name TEXT NOT NULL,
+            f_name TEXT NOT NULL,
+            l_name TEXT NOT NULL,
             Email TEXT NOT NULL,
             Major TEXT NOT NULL,
             COLLEGE TEXT NOT NULL);''')
