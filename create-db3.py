@@ -32,7 +32,7 @@ cur.execute('''CREATE TABLE DONATIONS
 cur.execute('''CREATE TABLE ALERTS
             (AlertID INT PRIMARY KEY NOT NULL,
             AlumniID INT NOT NULL,
-            LastAlert DATETIME NOT NULL,
+            LastAlert DATE NOT NULL,
             FOREIGN KEY (ALUMNIID) REFERENCES ALUMNI(ID));''')
 
 
