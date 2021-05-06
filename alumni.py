@@ -7,7 +7,10 @@ cur = con.cursor()
 while True:
    print("Please enter Alumni's First Name:")
    input_fname = str(input())
-   cur.execute("SELECT * FROM ALUMNI WHERE Name = %s", (input_fname,))
+   cur.execute("SELECT * FROM ALUMNI WHERE Name = %s")
+   #cur.execute("""
+   #         INSERT INTO 
+   #""")
    
    
    # print("Getting all alumni...")
