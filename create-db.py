@@ -25,7 +25,7 @@ cur.execute('''CREATE TABLE ALUMNI
 cur.execute('''CREATE TABLE DONATIONS
             (DonationID INT PRIMARY KEY NOT NULL,
             AlumniID INT NOT NULL,
-            Donation REAL NOT NULL,
+            Donation MONEY NOT NULL,
             FOREIGN KEY (ALUMNIID) REFERENCES ALUMNI(ID));''')
 
 # Create alerts table

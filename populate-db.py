@@ -8,23 +8,23 @@ cur = con.cursor()
 
 # Adds alumni into alumni table
 cur.execute('''INSERT INTO ALUMNI (ID, Name, Email , Major , College)
-      VALUES (1, 'First Last', 'x@mail.com', 'Information Technology', 'Engineering');''')
+      VALUES (cc420, 'Cheech Chong', 'cc420@njit.edu', 'Computer Science', 'Ying Wu College of Computing');''')
 
 cur.execute('''INSERT INTO ALUMNI (ID, Name, Email , Major , College)
-      VALUES (2, 'Fname Lname', 'y@mail.com', 'Computer Science', 'Engineering');''')
+      VALUES (hh69, 'Human Person', 'hh69@njit.edu', 'Information Technology', 'Ying Wu College of Computing');''')
 
 cur.execute('''INSERT INTO ALUMNI (ID, Name, Email , Major , College)
-      VALUES (3, 'Name Name', 'z@mail.com', 'Biology', 'Biological Sciences');''')
+      VALUES (ts86, 'Tony Soprano', 'ts86@njit.edu', 'Environmental Services and Waste Management', 'Newark College of Engineering');''')
 
 # Adds donations into donations table
 cur.execute('''INSERT INTO DONATIONS (DonationID, AlumniID, Donation)
-      VALUES (1, 1, 50);''')
+      VALUES (1, 1, 420.69);''')
 
 cur.execute('''INSERT INTO DONATIONS (DonationID, AlumniID, Donation)
-      VALUES (2, 2, 1000);''')
+      VALUES (2, 2, 1000.00);''')
 
 cur.execute('''INSERT INTO DONATIONS (DonationID, AlumniID, Donation)
-      VALUES (3, 3, 50000);''')
+      VALUES (3, 3, 50000.00);''')
 
 # Adds alerts into alerts table
 cur.execute('''INSERT INTO ALERTS (AlertID, AlumniID, LastAlert)
