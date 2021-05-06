@@ -12,9 +12,9 @@ while True:
    
    # print("Getting all alumni...")
     #cur.execute("SELECT * FROM ALUMNI")
-    rows = cur.fetchall()
+rows = cur.fetchall()
 
-    for row in rows:
+for row in rows:
         print("ID: ", row[0])
         print("name: ", row[1])
         print("email: ", row[2])
