@@ -18,23 +18,23 @@ cur.execute('''INSERT INTO ALUMNI (ID, Name, Email , Major , College)
 
 # Adds donations into donations table
 cur.execute('''INSERT INTO DONATIONS (DonationID, AlumniID, Donation)
-      VALUES (1, 1, 420.69);''')
+      VALUES (1, 420, 420.69);''')
 
 cur.execute('''INSERT INTO DONATIONS (DonationID, AlumniID, Donation)
-      VALUES (2, 2, 1000.00);''')
+      VALUES (2, 69, 1000.00);''')
 
 cur.execute('''INSERT INTO DONATIONS (DonationID, AlumniID, Donation)
-      VALUES (3, 3, 50000.00);''')
+      VALUES (3, 86, 50000.00);''')
 
 # Adds alerts into alerts table
 cur.execute('''INSERT INTO ALERTS (AlertID, AlumniID, LastAlert)
-      VALUES (1, 1, '2021-5-4 12:30:50');''')
+      VALUES (1, 420, '2021-5-4 12:30:50');''')
 
 cur.execute('''INSERT INTO ALERTS (AlertID, AlumniID, LastAlert)
-      VALUES (2, 2, '2021-7-4 8:15:00');''')
+      VALUES (2, 69, '2021-7-4 8:15:00');''')
 
 cur.execute('''INSERT INTO ALERTS (AlertID, AlumniID, LastAlert)
-      VALUES (3, 3, '2021-5-4 1:45:00');''')
+      VALUES (3, 86, '2021-5-4 1:45:00');''')
 
 con.commit()
 con.close()
