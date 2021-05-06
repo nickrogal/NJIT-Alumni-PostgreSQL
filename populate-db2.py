@@ -1,10 +1,10 @@
 import psycopg2
 
 # Connect to PostgreSQL DBMS
-con = psycopg2.connect(database = "ubuntu-server", user = "testuser", password = "testpass", host = "localhost")
+con = psycopg2.connect(database="ubuntu_server", user='testuser', password='test', host='localhost', port= 5432)
 print("Database opened")
 
-cur = conn.cursor()
+cur = con.cursor()
 
 # Adds alumni into alumni table
 cur.execute('''INSERT INTO ALUMNI (ID, Name, Email , Major , College)
@@ -36,8 +36,8 @@ cur.execute('''INSERT INTO ALERTS (AlertID, AlumniID, LastAlert)
 cur.execute('''INSERT INTO ALERTS (AlertID, AlumniID, LastAlert)
       VALUES (1, 3, '2021-5-4 1:45:00');''')
 
-conn.commit()
-conn.close()
+con.commit()
+con.close()
 
 
 
