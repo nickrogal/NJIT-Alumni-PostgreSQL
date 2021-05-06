@@ -1,9 +1,15 @@
+#this is the actual alumni application which prompts the user for the alumni's full name seperated by a space and produces the name, email, major, njit college, donation ammount
+#and donation date. 
+# 
+# ctrl+c to quit.
+
 import psycopg2
 
-# Fill in db info
+# connect to the database and set the cursor
 con = psycopg2.connect(database = "ubuntu_server", user = "testuser", password = "test", host = "localhost")
 cur = con.cursor()
 
+#prompt the user for alumni's name and produce the output
 while True:
    print("Please enter alumni's first and last name seperated by a space:")
    input_name = str(input())
@@ -22,19 +28,8 @@ while True:
         print("Alumni Email: ", row[1])
         print("Alumni Major: ", row[2])
         print("Alumni NJIT College: ", row[3])
-        print("Donation Amount: $", row[4])
+        print("Donation Amount: ", row[4])
         print("Donation Date: ", row[5])
-   #cur.execute('''SELECT Alumni.Name, Alumni.Email, Alumni.Major, Donations.Donation, Alerts.LastAlert
-   #                 FROM Alumni
-   #                 JOIN Donations 
-   #                 ON Alumni.ID = Donations.AlumniID
-   #                 JOIN Alerts
-   #                 ON Alumni.ID = Alerts.AlumniID
-   #                 WHERE Name = %s''', (input_name,))
-   
 
-  
-  
-   print(cur.fetchall())
 cur.close()
 con.close()

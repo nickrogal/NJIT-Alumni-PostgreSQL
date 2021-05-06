@@ -1,13 +1,14 @@
+#this script populates the database tables. replace user and password with whatever your postgres user creds are.
+
 import psycopg2
 
-# Connect to PostgreSQL DBMS
-#con = psycopg2.connect(database="postgres", user='postgres', password='password', host='localhost', port= 5432)
+#connect to the database
 con = psycopg2.connect(database="ubuntu_server", user='testuser', password='test', host='localhost', port= 5432)
 print("Connected to database successfully!")
 
 con.autocommit = True
 
-# Obtain a DB Cursor
+# set the cursor
 cur = con.cursor()
 
 # Create alumni table
@@ -28,8 +29,8 @@ cur.execute('''CREATE TABLE DONATIONS
             FOREIGN KEY (ALUMNIID) REFERENCES ALUMNI(ID));''')
 print("Donations table created...")
 print("......")
-# Create alerts table
 
+# Create alerts table
 cur.execute('''CREATE TABLE ALERTS
             (AlertID INT PRIMARY KEY NOT NULL,
             AlumniID INT NOT NULL,
