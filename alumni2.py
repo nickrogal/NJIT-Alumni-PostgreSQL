@@ -2,7 +2,7 @@ import psycopg2
 
 # Fill in db info
 con = psycopg2.connect(database = "ubuntu_server", user = "testuser", password = "test", host = "localhost")
-cur = conn.cursor()
+cur = con.cursor()
 
 while True:
     print("Getting all alumni...")
@@ -17,4 +17,4 @@ while True:
         print("college: ", row[4])
 
 cur.close()
-conn.close()
+con.close()
