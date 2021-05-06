@@ -1,7 +1,7 @@
 import psycopg2
 
 # Connect to PostgreSQL DBMS
-con = psycopg2.connect(database="ubuntu-server", user='postgres', password='postgres', host='localhost', port= 5432)
+con = psycopg2.connect(database="postgres", user='postgres', password='password', host='localhost', port= 5432)
 #con = psycopg2.connect(database="ubuntu-server", user='testuser', password='password', host='localhost', port= 5432)
 print("Database opened")
 
