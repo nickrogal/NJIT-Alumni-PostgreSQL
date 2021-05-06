@@ -5,7 +5,7 @@ con = psycopg2.connect(database = "ubuntu_server", user = "testuser", password =
 cur = con.cursor()
 
 while True:
-   print("Please enter Alumni's First Name:")
+   print("Please enter alumni's first and last name seperated by a space:")
    input_name = str(input())
    cur.execute('''SELECT Alumni.Name, Alumni.Email, Alumni.Major, Donations.Donation, Alerts.LastAlert
                     FROM Alumni
@@ -16,11 +16,6 @@ while True:
                     WHERE Name = %s''', (input_name,))
    
 
-
-
-
-
- #  cur.execute("SELECT * FROM ALUMNI WHERE Name = %s", (input_fname,))
   
   
    print(cur.fetchall())

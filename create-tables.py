@@ -10,9 +10,6 @@ con.autocommit = True
 # Obtain a DB Cursor
 cur = con.cursor()
 
-# Creates database
-#cur.execute("CREATE database ubuntu-server")
-
 # Create alumni table
 cur.execute('''CREATE TABLE ALUMNI
             (ID INT PRIMARY KEY NOT NULL,
