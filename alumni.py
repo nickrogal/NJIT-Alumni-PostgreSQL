@@ -8,7 +8,7 @@ while True:
    print("Please enter Alumni's First Name:")
    input_fname = str(input())
    cur.execute("SELECT * FROM ALUMNI WHERE Name = %s", (input_fname,))
-   print cur.fetchall()
+   print(cur.fetchall())
  
  
    #cur.execute("""
