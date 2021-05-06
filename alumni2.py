@@ -1,7 +1,7 @@
 import psycopg2
 
 # Fill in db info
-con = psycopg2.connect(database = "ubuntu-server", user = "testuser", password = "testpass", host = "localhost")
+con = psycopg2.connect(database = "ubuntu_server", user = "testuser", password = "test", host = "localhost")
 cur = conn.cursor()
 
 while True:
