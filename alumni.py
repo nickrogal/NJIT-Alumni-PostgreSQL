@@ -11,7 +11,7 @@ cur = con.cursor()
 
 #prompt the user for alumni's name and produce the output
 while True:
-   print("/nPlease enter alumni's first and last name seperated by a space:")
+   print("\nPlease enter alumni's first and last name seperated by a space:")
    input_name = str(input())
    cur.execute('''SELECT ALUMNI.Name, ALUMNI.Email, ALUMNI.Major, ALUMNI.College, DONATIONS.Donation, ALERTS.LastAlert
                     FROM ALUMNI
