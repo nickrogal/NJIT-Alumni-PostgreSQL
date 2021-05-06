@@ -7,7 +7,7 @@ cur = con.cursor()
 while True:
    print("Please enter Alumni's First Name:")
    input_fname = str(input())
-   cur.execute("SELECT * FROM ALUMNI WHERE alumni.name LIKE input_fname")
+   cur.execute("SELECT * FROM ALUMNI WHERE alumni.name = %s", input_fname)
    
    
    # print("Getting all alumni...")
