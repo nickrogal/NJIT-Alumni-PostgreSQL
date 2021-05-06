@@ -36,5 +36,5 @@ cur.execute('''CREATE TABLE ALERTS
             FOREIGN KEY (ALUMNIID) REFERENCES ALUMNI(ID));''')
 
 
-conn.commit()
-conn.close()
+con.commit()
+con.close()
