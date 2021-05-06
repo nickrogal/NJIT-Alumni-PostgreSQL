@@ -12,14 +12,14 @@ while True:
    
    # print("Getting all alumni...")
     #cur.execute("SELECT * FROM ALUMNI")
-    #rows = cur.fetchall()
+    rows = cur.fetchall()
 
-#    for row in rows:
- #       print("ID: ", row[0])
-  #      print("name: ", row[1])
-   #     print("email: ", row[2])
-    #    print("major: ", row[3])
-     #   print("college: ", row[4])
+    for row in rows:
+        print("ID: ", row[0])
+        print("name: ", row[1])
+        print("email: ", row[2])
+        print("major: ", row[3])
+        print("college: ", row[4])
 
 cur.close()
 con.close()
