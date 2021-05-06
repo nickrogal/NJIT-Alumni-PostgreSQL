@@ -2,7 +2,7 @@ import psycopg2
 
 # Connect to PostgreSQL DBMS
 con = psycopg2.connect(database="ubuntu_server", user='testuser', password='test', host='localhost', port= 5432)
-print("Database opened")
+print("Connected to database successfully!")
 
 cur = con.cursor()
 
@@ -39,6 +39,8 @@ cur.execute('''INSERT INTO ALERTS (AlertID, AlumniID, LastAlert)
 
 cur.execute('''INSERT INTO ALERTS (AlertID, AlumniID, LastAlert)
       VALUES (3, 86, '2021-5-4 1:45:00');''')
+print("...")
+print("Database has been successfully populated with sample data. When testing, use names 'Cheech Chong', 'Human Person', or 'Tony Soprano'.")
 
 con.commit()
 con.close()
