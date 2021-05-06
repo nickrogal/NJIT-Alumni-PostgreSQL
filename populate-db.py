@@ -8,13 +8,13 @@ cur = con.cursor()
 
 # Adds alumni into alumni table
 cur.execute('''INSERT INTO ALUMNI (ID, Name, Email , Major , College)
-      VALUES (cc420, 'Cheech Chong', 'cc420@njit.edu', 'Computer Science', 'Ying Wu College of Computing');''')
+      VALUES (420, 'Cheech Chong', 'cc420@njit.edu', 'Computer Science', 'Ying Wu College of Computing');''')
 
 cur.execute('''INSERT INTO ALUMNI (ID, Name, Email , Major , College)
-      VALUES (hh69, 'Human Person', 'hh69@njit.edu', 'Information Technology', 'Ying Wu College of Computing');''')
+      VALUES (69, 'Human Person', 'hh69@njit.edu', 'Information Technology', 'Ying Wu College of Computing');''')
 
 cur.execute('''INSERT INTO ALUMNI (ID, Name, Email , Major , College)
-      VALUES (ts86, 'Tony Soprano', 'ts86@njit.edu', 'Environmental Services and Waste Management', 'Newark College of Engineering');''')
+      VALUES (86, 'Tony Soprano', 'ts86@njit.edu', 'Environmental Services and Waste Management', 'Newark College of Engineering');''')
 
 # Adds donations into donations table
 cur.execute('''INSERT INTO DONATIONS (DonationID, AlumniID, Donation)
